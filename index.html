@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#123b78">
+  <title>AI Career Counselling & Design Thinking | Feedback</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="page">
+    <section class="card">
+
+      <header class="brand-header">
+        <div class="brand-logos">
+          <div class="logo-wrap miet-wrap">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgd7e8gf2FtYbGxI1-T8kSt7WI89k-hHj0ql_GdJbfpg&s=10"
+              alt="MIET Kumaon Logo"
+              class="miet-logo"
+            >
+          </div>
+
+          <div class="brand-divider"></div>
+
+          <!-- ACIC logo placeholder/brand mark -->
+          <div class="acic-brand" aria-label="ACIC Devbhumi Foundation">
+           <img id="acicLogo" src="YOUR_ACIC_PUBLIC_LOGO_URL_HERE" alt="ACIC Devbhumi Foundation Logo">
+          </div>
+        </div>
+
+        <div class="title-area">
+          <span class="eyebrow">SESSION FEEDBACK FORM</span>
+          <h1>AI Career Counselling <span>+</span> Design Thinking</h1>
+          <p>For  Teachers, Classes XI &amp; XII </p>
+          <div class="session-line">
+            <span>Mentors</span>
+            <strong>Charanjeet Singh Sidhu</strong>
+            <b>&amp;</b>
+            <strong>Vatsalya Sharma</strong>
+          </div>
+        </div>
+      </header>
+
+      <div class="intro">
+        <div class="intro-icon">✦</div>
+        <div>
+          <strong>Thank you for being part of the session!</strong>
+          <p>
+            Please share your feedback. Your responses will help us plan
+            relevant career, AI, innovation and design-thinking sessions
+            for students and teachers.
+          </p>
+        </div>
+      </div>
+
+      <form id="feedbackForm" novalidate>
+
+        <section class="form-section">
+          <div class="section-heading">
+            <span>01</span>
+            <div>
+              <h2>Participant Details</h2>
+              <p>Tell us a little about yourself.</p>
+            </div>
+          </div>
+
+          <div class="form-grid">
+
+            <div class="field">
+              <label for="school">School Name <em>*</em></label>
+              <select id="school" name="school" required>
+                <option value="">Select your school</option>
+                <option value="Evergreen Sr. Sec. School">Evergreen Sr. Sec. School</option>
+                <option value="N.K.B Sr. Sec. School">N.K.B Sr. Sec. School</option>
+                <option value="Immortal Public School">Immortal Public School</option>
+                <option value="Other / Not Listed">Other / Not Listed</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="participantType">I am a <em>*</em></label>
+              <select id="participantType" name="participantType" required>
+                <option value="">Select participant type</option>
+                <option value="student">Student</option>
+                <option value="teacher">Teacher</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="fullName">Full Name <em>*</em></label>
+              <input id="fullName" name="fullName" type="text"
+                     placeholder="Enter your full name" required>
+            </div>
+
+            <div class="field">
+              <label for="phone">Mobile Number <em>*</em></label>
+              <input id="phone" name="phone" type="tel"
+                     inputmode="numeric" maxlength="10"
+                     placeholder="10-digit mobile number" required>
+            </div>
+
+            <div class="field">
+              <label for="email">Email Address</label>
+              <input id="email" name="email" type="email"
+                     placeholder="name@example.com">
+            </div>
+
+            <div class="field">
+              <label for="branch">Branch / Stream <em>*</em></label>
+              <select id="branch" name="branch" required>
+                <option value="">Select branch / stream</option>
+                <option>Science - PCM</option>
+                <option>Science - PCB</option>
+                <option>Science - PCMB</option>
+                <option>Commerce</option>
+                <option>Humanities / Arts</option>
+                <option>Vocational</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="field" id="classField">
+              <label for="classLevel">Class / Grade <em>*</em></label>
+              <select id="classLevel" name="classLevel" required>
+                <option value="">Select class</option>
+                <option>Class XI</option>
+                <option>Class XII</option>
+              </select>
+            </div>
+
+          </div>
+
+          <div class="dynamic-panel" id="teacherFields" hidden>
+            <div class="panel-title">Teacher Details</div>
+            <div class="form-grid">
+
+              <div class="field">
+                <label for="designation">Designation <em>*</em></label>
+                <select id="designation" name="designation">
+                  <option value="">Select designation</option>
+                  <option>Principal</option>
+                  <option>Vice Principal</option>
+                  <option>PGT</option>
+                  <option>TGT</option>
+                  <option>PRT</option>
+                  <option>Career Counsellor</option>
+                  <option>Coordinator</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="subject">Subject / Department <em>*</em></label>
+                <input id="subject" name="subject" type="text"
+                       placeholder="e.g. Mathematics / Physics / CS">
+              </div>
+
+            </div>
+          </div>
+
+          <div class="dynamic-panel" id="studentFields" hidden>
+            <div class="panel-title">Student Details</div>
+            <div class="form-grid">
+
+              <div class="field">
+                <label for="careerInterest">Career Area of Interest</label>
+                <select id="careerInterest" name="careerInterest">
+                  <option value="">Select an area</option>
+                  <option>Artificial Intelligence / Machine Learning</option>
+                  <option>Computer Science / IT</option>
+                  <option>Engineering</option>
+                  <option>Medical / Healthcare</option>
+                  <option>Design / Creative Fields</option>
+                  <option>Business / Entrepreneurship</option>
+                  <option>Law</option>
+                  <option>Government Services</option>
+                  <option>Research / Innovation</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="careerDecision">Have you decided your career?</label>
+                <select id="careerDecision" name="careerDecision">
+                  <option value="">Select an option</option>
+                  <option>Yes</option>
+                  <option>Somewhat</option>
+                  <option>Not yet</option>
+                </select>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <div class="section-heading">
+            <span>02</span>
+            <div>
+              <h2>Session Feedback</h2>
+              <p>Help us understand your experience.</p>
+            </div>
+          </div>
+
+          <div class="form-grid">
+
+            <div class="field full">
+              <label>Overall rating <em>*</em></label>
+              <div class="rating-grid">
+                <label class="rating-card">
+                  <input type="radio" name="rating" value="1" required>
+                  <span class="rating-number">1</span>
+                  <span>Poor</span>
+                </label>
+                <label class="rating-card">
+                  <input type="radio" name="rating" value="2">
+                  <span class="rating-number">2</span>
+                  <span>Fair</span>
+                </label>
+                <label class="rating-card">
+                  <input type="radio" name="rating" value="3">
+                  <span class="rating-number">3</span>
+                  <span>Good</span>
+                </label>
+                <label class="rating-card">
+                  <input type="radio" name="rating" value="4">
+                  <span class="rating-number">4</span>
+                  <span>Very Good</span>
+                </label>
+                <label class="rating-card">
+                  <input type="radio" name="rating" value="5">
+                  <span class="rating-number">5</span>
+                  <span>Excellent</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="relevance">How relevant was the session? <em>*</em></label>
+              <select id="relevance" name="relevance" required>
+                <option value="">Select</option>
+                <option>Highly Relevant</option>
+                <option>Relevant</option>
+                <option>Somewhat Relevant</option>
+                <option>Not Relevant</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="understanding">How easy was it to understand? <em>*</em></label>
+              <select id="understanding" name="understanding" required>
+                <option value="">Select</option>
+                <option>Very Easy</option>
+                <option>Easy</option>
+                <option>Moderate</option>
+                <option>Difficult</option>
+              </select>
+            </div>
+
+            <div class="field full">
+              <label for="takeaway">What was your key takeaway?</label>
+              <textarea id="takeaway" name="takeaway"
+                        placeholder="What did you learn or find most useful?"></textarea>
+            </div>
+
+            <div class="field full">
+              <label for="likedMost">What did you like most about the session?</label>
+              <textarea id="likedMost" name="likedMost"
+                        placeholder="Career guidance, AI awareness, activities, interaction, design thinking, etc."></textarea>
+            </div>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <div class="section-heading">
+            <span>03</span>
+            <div>
+              <h2>Future Session Requirements</h2>
+              <p>Tell us what you would like to explore next.</p>
+            </div>
+          </div>
+
+          <div class="form-grid">
+
+            <div class="field full">
+              <label>Would you like any other session? <em>*</em></label>
+              <div class="choice-row">
+                <label class="choice-pill">
+                  <input type="radio" name="otherSession" value="Yes" required>
+                  <span>Yes, definitely</span>
+                </label>
+                <label class="choice-pill">
+                  <input type="radio" name="otherSession" value="Maybe">
+                  <span>Maybe</span>
+                </label>
+                <label class="choice-pill">
+                  <input type="radio" name="otherSession" value="No">
+                  <span>No</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="field full" id="otherSessionBox" hidden>
+              <label for="requiredSession">Which session / topic would you like?</label>
+              <textarea id="requiredSession" name="requiredSession"
+                        placeholder="e.g. AI Tools, Cyber Security, Entrepreneurship, Communication Skills, Design Thinking Workshop, Career Planning..."></textarea>
+            </div>
+
+            <div class="field full">
+              <label for="suggestions">Suggestions / Additional Feedback</label>
+              <textarea id="suggestions" name="suggestions"
+                        placeholder="Anything else you would like to share with us..."></textarea>
+            </div>
+          </div>
+        </section>
+
+        <div class="submit-area">
+          <div id="submitStatus" class="submit-status" aria-live="polite"></div>
+          <button type="submit" class="submit-btn" id="submitBtn">
+            Submit Feedback <span>→</span>
+          </button>
+          <p>Thank you for your valuable time and feedback.</p>
+        </div>
+
+      </form>
+
+      <div class="success-box" id="successBox" hidden>
+        <div class="success-icon">✓</div>
+        <h2>Thank You!</h2>
+        <p>Your feedback has been submitted successfully. Thank you for your valuable response.</p>
+        <button type="button" class="secondary-btn" id="editResponse">
+          Submit another response
+        </button>
+      </div>
+
+      <footer class="footer">
+        <div class="footer-main">
+          <strong>AI Career Counselling &amp; Design Thinking</strong>
+          <span> | <a href="https://mietkumaon.ac.in/" target="_blank" rel="noopener">MIET Kumaon</a> &amp; ACIC Devbhumi Foundation</span>
+        </div>
+
+        <div class="footer-links">
+          <a href="https://mietkumaon.ac.in/" target="_blank" rel="noopener">MIET Website</a>
+          <a href="https://charanjeetsinghsidhu.vercel.app/" target="_blank" rel="noopener">Mentor Profile</a>
+        </div>
+
+        <div class="maintained">
+          Page designed &amp; maintained by
+          <strong><a href="https://charanjeetsinghsidhu.vercel.app/" target="_blank" rel="noopener">Charanjeet Singh Sidhu</a></strong>
+        </div>
+      </footer>
+
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,708 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #123b78;
+  --primary-2: #1e5aa8;
+  --accent: #ef2b2d;
+  --text: #172033;
+  --muted: #68758a;
+  --line: #e2e8f0;
+  --soft: #f5f8fc;
+  --white: #ffffff;
+  --success: #159947;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 8% 10%, rgba(30, 90, 168, .09), transparent 28%),
+    radial-gradient(circle at 92% 85%, rgba(239, 43, 45, .06), transparent 30%),
+    #eef3f9;
+  color: var(--text);
+  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+  padding: 30px 16px;
+}
+
+.page {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid rgba(18, 59, 120, .08);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 24px 70px rgba(18, 42, 75, .13);
+}
+
+.brand-header {
+  position: relative;
+  padding: 28px 38px 30px;
+  background: linear-gradient(135deg, #0e3269 0%, #174e93 65%, #1e5aa8 100%);
+  color: #fff;
+}
+
+.brand-header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ef2b2d, #ffffff, #ef2b2d);
+}
+
+.brand-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 22px;
+}
+
+.logo-wrap {
+  background: #fff;
+  border-radius: 13px;
+  padding: 7px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 72px;
+}
+
+.miet-logo {
+  width: 142px;
+  height: auto;
+  display: block;
+}
+
+.brand-divider {
+  width: 1px;
+  height: 58px;
+  background: rgba(255,255,255,.35);
+}
+
+.acic-brand {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.acic-mark {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  background: rgba(255,255,255,.1);
+}
+
+.acic-text {
+  font-size: 11px;
+  line-height: 1.25;
+  letter-spacing: 1.1px;
+  font-weight: 800;
+}
+
+.title-area {
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  padding: 6px 12px;
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 30px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  background: rgba(255,255,255,.08);
+}
+
+.title-area h1 {
+  margin-top: 13px;
+  font-size: clamp(25px, 4vw, 38px);
+  line-height: 1.16;
+  letter-spacing: -.7px;
+}
+
+.title-area h1 span {
+  color: #ff5b5d;
+}
+
+.title-area > p {
+  margin-top: 8px;
+  color: rgba(255,255,255,.86);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.session-line {
+  margin: 17px auto 0;
+  width: fit-content;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 7px 10px;
+  align-items: center;
+  font-size: 12px;
+}
+
+.session-line span {
+  color: rgba(255,255,255,.65);
+  margin-right: 3px;
+}
+
+.session-line strong {
+  font-size: 13px;
+}
+
+.session-line b {
+  color: #ff7072;
+}
+
+.intro {
+  margin: 25px 38px 0;
+  padding: 17px 19px;
+  border: 1px solid #dfe9f6;
+  background: #f6f9fd;
+  border-radius: 15px;
+  display: flex;
+  gap: 13px;
+  align-items: flex-start;
+}
+
+.intro-icon {
+  flex: 0 0 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: #e5effb;
+  color: var(--primary-2);
+  font-size: 17px;
+}
+
+.intro strong {
+  font-size: 14px;
+}
+
+.intro p {
+  color: var(--muted);
+  font-size: 12.5px;
+  line-height: 1.6;
+  margin-top: 3px;
+}
+
+form {
+  padding: 10px 38px 0;
+}
+
+.form-section {
+  padding: 27px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.section-heading {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+  margin-bottom: 21px;
+}
+
+.section-heading > span {
+  width: 39px;
+  height: 39px;
+  flex: 0 0 39px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  background: #eaf2fc;
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.section-heading h2 {
+  font-size: 17px;
+  color: var(--primary);
+}
+
+.section-heading p {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 11.5px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.field {
+  min-width: 0;
+}
+
+.field.full {
+  grid-column: 1 / -1;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #334155;
+}
+
+.field label em {
+  color: var(--accent);
+  font-style: normal;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid #d6dee9;
+  border-radius: 10px;
+  background: #fcfdff;
+  color: #182338;
+  outline: none;
+  font: inherit;
+  font-size: 13px;
+  transition: .2s ease;
+}
+
+input,
+select {
+  height: 45px;
+  padding: 0 13px;
+}
+
+textarea {
+  min-height: 108px;
+  padding: 12px 13px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #9aa6b7;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #4a83c5;
+  box-shadow: 0 0 0 3px rgba(30, 90, 168, .09);
+  background: #fff;
+}
+
+.dynamic-panel {
+  margin-top: 18px;
+  padding: 18px;
+  border: 1px solid #dce7f4;
+  border-radius: 13px;
+  background: #f7faff;
+}
+
+.dynamic-panel[hidden],
+#otherSessionBox[hidden],
+#successBox[hidden] {
+  display: none !important;
+}
+
+.panel-title {
+  margin-bottom: 15px;
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .8px;
+}
+
+.rating-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 9px;
+}
+
+.rating-card {
+  position: relative;
+  cursor: pointer;
+  min-height: 72px;
+  border: 1px solid #dce3ec;
+  border-radius: 11px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 10.5px;
+  color: #637085;
+  font-weight: 700;
+  transition: .2s ease;
+}
+
+.rating-card input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.rating-number {
+  width: 25px;
+  height: 25px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #eef3f9;
+  color: var(--primary);
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.rating-card:has(input:checked) {
+  border-color: var(--primary-2);
+  background: #edf5ff;
+  box-shadow: 0 5px 15px rgba(18, 59, 120, .08);
+}
+
+.rating-card:has(input:checked) .rating-number {
+  background: var(--primary);
+  color: #fff;
+}
+
+.choice-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.choice-pill {
+  position: relative;
+  cursor: pointer;
+}
+
+.choice-pill input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.choice-pill span {
+  display: inline-flex;
+  min-height: 43px;
+  align-items: center;
+  padding: 0 18px;
+  border: 1px solid #d8e0eb;
+  border-radius: 10px;
+  background: #fff;
+  color: #536176;
+  font-size: 12.5px;
+  font-weight: 700;
+  transition: .2s;
+}
+
+.choice-pill:has(input:checked) span {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.submit-area {
+  text-align: center;
+  padding: 29px 0 24px;
+}
+
+.submit-btn,
+.secondary-btn {
+  border: 0;
+  cursor: pointer;
+  border-radius: 10px;
+  font: inherit;
+  font-weight: 800;
+  transition: .2s ease;
+}
+
+.submit-btn {
+  min-height: 48px;
+  padding: 0 30px;
+  background: linear-gradient(135deg, #123b78, #1e5aa8);
+  color: #fff;
+  box-shadow: 0 9px 22px rgba(18, 59, 120, .2);
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(18, 59, 120, .27);
+}
+
+.submit-btn span {
+  margin-left: 8px;
+  font-size: 17px;
+}
+
+.submit-area p {
+  margin-top: 10px;
+  color: #8994a4;
+  font-size: 10.5px;
+}
+
+.success-box {
+  text-align: center;
+  padding: 70px 30px;
+}
+
+.success-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 17px;
+  border-radius: 50%;
+  background: #e6f7ed;
+  color: var(--success);
+  display: grid;
+  place-items: center;
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.success-box h2 {
+  color: var(--primary);
+  font-size: 26px;
+}
+
+.success-box p {
+  margin: 8px 0 20px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.secondary-btn {
+  padding: 11px 18px;
+  background: #edf3fa;
+  color: var(--primary);
+}
+
+.footer {
+  padding: 16px 38px 20px;
+  border-top: 1px solid var(--line);
+  color: #8a95a5;
+  font-size: 10.5px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.footer strong {
+  color: #526075;
+}
+
+.maintained {
+  text-align: right;
+}
+
+@media (max-width: 720px) {
+  body {
+    padding: 12px 8px;
+  }
+
+  .card {
+    border-radius: 17px;
+  }
+
+  .brand-header {
+    padding: 22px 17px 25px;
+  }
+
+  .brand-logos {
+    gap: 13px;
+  }
+
+  .logo-wrap {
+    min-height: 58px;
+    padding: 5px 8px;
+  }
+
+  .miet-logo {
+    width: 105px;
+  }
+
+  .brand-divider {
+    height: 44px;
+  }
+
+  .acic-brand {
+    min-height: 58px;
+  }
+
+  .acic-mark {
+    width: 48px;
+    height: 48px;
+    font-size: 10px;
+  }
+
+  .acic-text {
+    font-size: 8px;
+  }
+
+  .intro {
+    margin: 18px 17px 0;
+  }
+
+  form {
+    padding: 0 17px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .field.full {
+    grid-column: auto;
+  }
+
+  .rating-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .rating-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .footer {
+    padding: 15px 17px 18px;
+    flex-direction: column;
+  }
+
+  .maintained {
+    text-align: left;
+  }
+}
+
+@media (max-width: 430px) {
+  .title-area h1 {
+    font-size: 23px;
+  }
+
+  .session-line {
+    font-size: 10px;
+  }
+
+  .session-line strong {
+    font-size: 11px;
+  }
+
+  .brand-logos {
+    align-items: center;
+  }
+
+  .miet-logo {
+    width: 92px;
+  }
+
+  .acic-text {
+    display: none;
+  }
+
+  .choice-row {
+    flex-direction: column;
+  }
+
+  .choice-pill span {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
+.acic-brand img {
+  width: 170px;
+  max-width: 32vw;
+  max-height: 78px;
+  object-fit: contain;
+  display: block;
+  border-radius: 8px;
+}
+
+.footer-main {
+  flex: 1 1 260px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer a {
+  color: #526075;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.footer a:hover {
+  color: var(--primary-2);
+  text-decoration: underline;
+}
+
+.submit-status {
+  min-height: 18px;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 11.5px;
+  font-weight: 700;
+}
+
+.submit-status.error {
+  color: #c62828;
+}
+
+.submit-status.success {
+  color: var(--success);
+}
+
+.submit-btn:disabled {
+  opacity: .65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (max-width: 720px) {
+  .acic-brand img {
+    width: 120px;
+    max-width: 38vw;
+    max-height: 58px;
+  }
+
+  .footer-links {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 430px) {
+  .acic-brand img {
+    width: 90px;
+    max-width: 30vw;
+  }
+}
